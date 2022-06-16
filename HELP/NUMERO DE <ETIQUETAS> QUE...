@@ -1,0 +1,48 @@
+<script>
+
+    function opcion1() {
+        //Número de enlaces de la página
+
+        var enlaces = document.getElementsByTagName("a");
+        var numero = enlaces.length;
+        alert(numero);
+
+    }
+
+    function opcion2() {
+        //Dirección a la que enlaza el penúltimo enlace
+
+        var enlaces = document.getElementsByTagName("a");
+        var penultimo = enlaces[enlaces.length - 2].href;
+        alert(penultimo);
+
+    }
+
+    function opcion3() {
+        //Numero de enlaces que enlazan a http://prueba
+
+        var enlaces = document.getElementsByTagName("a");
+        var longitud = enlaces.length;
+        var cont = 0;
+        for (var i = 0; i < longitud; i++) {
+            if (enlaces[i].href == "https://prueba" || enlaces[i].href == "https://prueba/") {
+                cont++;
+            }
+
+        }
+
+        alert(cont);
+
+
+    }
+
+    function opcion4() {
+        //Número de enlaces del tercer párrafo
+
+        var parrafos = document.getElementsByTagName("p");
+        var ultimoParrafo = parrafos[2].getElementsByTagName("a");
+        alert(ultimoParrafo.length);
+
+    }
+
+</script>
