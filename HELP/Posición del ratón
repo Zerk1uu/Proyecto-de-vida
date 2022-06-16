@@ -1,0 +1,15 @@
+HTML
+<body onmousemove="position();">
+    <div id="mousePositions">X --&gt; 635<br>Y --&gt; 754</div>
+
+</body>
+
+JS
+
+
+    function position() {
+        var x = event.clientX;
+        var y = event.clientY;
+        var mousePositions = document.getElementById('mousePositions');
+	    mousePositions.innerHTML = 'X --> ' + x + '<br>Y --> ' + y;
+    }
