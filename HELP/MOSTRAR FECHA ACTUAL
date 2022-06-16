@@ -1,0 +1,86 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<script type="text/javascript">
+
+var fecha = new Date();
+
+
+function MostrarDia() {
+
+    var dias = new Array("Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado");
+
+    var dia=parseInt(fecha.getDay());
+    var diaB=parseInt(fecha.getDate());
+
+    for (var cont=0; cont<dias.length;cont++){
+
+        if (cont== dia) {
+
+            var nombre=dias[cont];
+        }
+
+    }
+
+    document.getElementById("verdia").innerHTML = diaB + ' , ' + nombre;
+}
+
+function MostrarMes() {
+
+var meses = new Array ("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre");
+    
+var mes=parseInt(fecha.getMonth());
+
+for (var cont=0; cont<meses.length;cont++) {
+
+    if ((cont)== mes) {
+
+        var cadena= meses[cont];
+    }
+}
+
+document.getElementById("vermes").innerHTML= + (mes+1) + ' , ' + cadena;
+
+}
+
+function MostrarAnio() {
+    
+    var anio=parseInt(fecha.getFullYear());
+
+    document.getElementById("veranio").innerHTML= + anio;
+
+    }
+
+
+</script>
+
+</head>
+
+<body>
+
+
+
+<p id="dia" onclick="MostrarDia()" style="display:inline;"> Dia</p> <p id="verdia" style="display:inline;"></p>
+
+<br>
+<br>
+
+
+
+<p id="mes" onclick="MostrarMes()" style="display:inline;">Mes </p> <p id="vermes" style="display:inline;"></p>
+
+<br>
+<br>
+
+
+
+<p id="anio" onclick="MostrarAnio()" style="display:inline;">Anio</p> <p id="veranio" style="display:inline;"></p>
+
+
+
+
+
+
+
+
+</body>
