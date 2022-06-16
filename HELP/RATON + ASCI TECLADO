@@ -1,0 +1,140 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 15</title>
+<style>
+    span{
+        color: red;
+    }
+</style><script>
+
+  /* function resalta(elEvento) {
+        var evento = elEvento || window.event;
+        switch (evento.type) {
+            case 'mouseover':
+                this.style.borderColor = 'red';
+                break;
+            case 'mouseout':
+                this.style.borderColor = 'silver';
+                break;
+        }
+    }
+
+    window.onload = function () {
+        document.getElementById("seccion").onmouseover = resalta;
+        document.getElementById("seccion").onmouseout = resalta;
+    }**
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
+    
+    /*function muestraInformacion(elEvento) {
+        var evento = window.event || elEvento;
+
+        var mensaje = "Tipo de evento: " + evento.type + "<br>" +
+            "Propiedad keyCode: " + evento.keyCode + "<br>" +
+            "Propiedad charCode: " + evento.charCode + "<br>" +
+            "Carácter pulsado: " + String.fromCharCode(evento.charCode);
+
+        info.innerHTML += "<br>--------------------------------------<br>" + mensaje
+    }
+
+    window.onload = function () {
+            document.onkeyup = muestraInformacion;
+            document.onkeypress = muestraInformacion;
+            document.onkeydown = muestraInformacion;
+        }*/
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+       /* function maneja(elEvento) {
+            var evento= elEvento || window.event;
+
+            var carac= evento.charCode || evento.keyCode;
+
+            alert("El caracter pulsado es: "+String.fromCharCode(carac));
+
+        }
+    
+        document.onkeypress=maneja;*/
+        
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
+        /* function informar(elEvento) {
+            var evento= elEvento || window.event;
+            
+            var coordenadaX=evento.clientX;
+            var coordenadaY=evento.clientY;
+
+            var coordenadaXS=evento.screenX;
+            var coordenadaYS=evento.screenY;
+
+            var raton="La coordenada X es: "+coordenadaX+ "y la coordenada Y es: "+coordenadaY+"";
+            var pantalla="La coordenada X de la pantalla es: "+coordenadaXS+" y la coordenada Y de la pantalla es: "+coordencoordenadaYS+"";
+            
+        }
+
+        document.onclick=informar;*/
+
+//--------------------------------------------------------------------------------------------------------------------------------------------------
+
+    function informacion(elEvento) {
+        var evento = elEvento || window.event;
+        switch (evento.type) {
+            case 'mousemove':
+                document.getElementById('info').style.backgroundColor = '#FFFFFF';
+                var coordenadaXrelativa, coordenadaYrelativa, coordenadaXabsoluta, coordenadaYabsoluta;
+
+                coordenadaXabsoluta = evento.pageX;
+                coordenadaYabsoluta = evento.pageY;
+                coordenadaXrelativa = evento.clientX;
+                coordenadaYrelativa = evento.clientY;
+
+                muestraInformacion(['Ratón', 'Navegador [' + coordenadaXrelativa + ', ' + coordenadaYrelativa + ']', 'Pagina [' + coordenadaXabsoluta + ', ' + coordenadaYabsoluta + ']']);
+                break;
+
+            case 'keypress':
+                document.getElementById('info').style.backgroundColor = '#CCE6FF';
+                var caracter = evento.charCode || evento.keyCode;
+                var letra = String.fromCharCode(caracter);
+                var codigo = letra.charCodeAt(0);
+                muestraInformacion(['Teclado', 'Carácter [' + letra + ']', 'Código [' + codigo + ']']);
+                break;
+
+            case 'click':
+                document.getElementById('info').style.backgroundColor = '#FFFFCC';
+                break;
+
+        }
+    }
+
+    function muestraInformacion(mensaje) {
+        document.getElementById("info").innerHTML = '<h1>' + mensaje[0] + '</h1>';
+        for (var i = 1; i < mensaje.length; i++) {
+            document.getElementById("info").innerHTML += '<p>' + mensaje[i] + '</p>';
+        }
+        
+    }
+
+    document.onmousemove = informacion;
+    document.onkeypress = informacion;
+    document.onclick = informacion;
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+</script></head>
+
+<body>
+    <span>Mueve el cursor para saber las coordenadas de este en el navegador y en la página.</span><br><br>
+    <span>Pulsa teclas para saber el código ASCII</span>
+    <div id="info" style="background-color: rgb(255, 255, 255);"><h1>Ratón</h1><p>Navegador [935, 166]</p><p>Pagina [935, 166]</p></div>
+
+    <!--<div id="seccion" style="width:150px; height:60px; border:thin solid silver">
+        Sección de contenidos...
+    </div>-->
+    
+    <br><br><br>
+
+    <a href="MenuDom.html"><input type="button" value="Volver al menú"></a>
+
+</body>
