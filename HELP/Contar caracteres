@@ -1,0 +1,17 @@
+
+        function contchar() {
+         var max = 50;
+         var limite = 5;
+         var txtar = document.getElementById('txtar');
+         var longitudarea = parseInt(txtar.value.length);
+         var spancant = document.getElementById('cant');
+         var resto = max - longitudarea;
+         spancant.innerHTML = resto;
+         if (resto <= limite) {
+             spancant.style.color = 'red';
+             spancant.style.backgroundColor = 'black';
+         } else {
+            spancant.style.color = 'black';
+            spancant.style.backgroundColor = 'white';
+         }
+         }
