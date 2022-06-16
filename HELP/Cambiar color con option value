@@ -1,0 +1,16 @@
+
+        function CambiaFondo(x)
+        {
+            console.log(x.value);
+            var body = document.getElementById("body");
+            body.style.backgroundColor = x.value;
+        }
+    
+    <body id="body" style="background-color: red;">
+    <select name="fondo" id="fondo" onchange="CambiaFondo(this)">
+        <option value="red">Rojo</option>
+        <option value="yellow">Amarillo</option>
+        <option value="pink">Rosado</option>
+    </select>
+
+</body>
