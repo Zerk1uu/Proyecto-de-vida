@@ -1,0 +1,8 @@
+function aviso(){
+alert("Aviso");
+
+}
+
+<body onload="aviso()">
+
+
