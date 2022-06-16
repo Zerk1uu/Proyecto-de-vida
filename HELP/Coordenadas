@@ -1,0 +1,53 @@
+<script>
+    
+    // 1920, 936
+
+    function informacion(elEvento) {
+        var evento = elEvento;
+        var coordenadaX=evento.clientX;
+        var coordenadaY=evento.clientY;
+
+        if (coordenadaX<=960 && coordenadaY<=468) {
+            var izquierdaArriba = "Usted ha pulsado en la parte IZQUIERDA y ARRIBA de la pantalla";
+            document.getElementById("info").innerHTML = izquierdaArriba;
+
+        }
+
+        else if(coordenadaX<=960 && coordenadaY>=468){
+            var izquierdaAbajo = "Usted ha pulsado en la parte IZQUIERDA y ABAJO de la pantalla";
+            document.getElementById("info").innerHTML = izquierdaAbajo;
+        }
+
+        else if(coordenadaX>=960 && coordenadaY<=468){
+            var derechaArriba = "Usted ha pulsado en la parte DERECHA y ARRIBA de la pantalla";
+            document.getElementById("info").innerHTML = derechaArriba;
+        }
+
+        else {
+            var derechaAbajo = "Usted ha pulsado en la parte DERECHA y ABAJO de la pantalla";
+            document.getElementById("info").innerHTML = derechaAbajo;
+        }
+
+        if (coordenadaX == 960 && coordenadaY ==0 ) {
+            var ArribaSolo = "Usted está en la parte más ALTA y CENTRADA de la pantalla";
+            document.getElementById("info").innerHTML = ArribaSolo;
+        }
+
+        if(coordenadaX==960 && coordenadaY==936){
+            var AbajoSolo = "Usted está en la parte más BAJA y CENTRADA de la pantalla";
+            document.getElementById("info").innerHTML = AbajoSolo;
+        }
+
+        if (coordenadaX == 960 && coordenadaY == 468) {
+            var Centro = "Usted está en el CENTRO de la pantalla";
+            document.getElementById("info").innerHTML = Centro;
+        }
+
+        var mensaje = "La coordenada X es: " + coordenadaX + " y la coordenada Y: " + coordenadaY;
+    
+        document.getElementById("coordenadas").innerHTML = mensaje;
+
+    }
+    document.onclick=informacion;
+
+</script>
