@@ -22,7 +22,16 @@ function verocultar() {
         document.getElementById("ver").textContent="Mostrar texto"
     } 
 }
-
+//EJERCICIO 5
+function fondobeige(input) {
+    input.style.background="beige"
+}
+function fondoblanco(input) {
+    input.style.background="white"
+}
+function fondoazul(input) {
+    input.style.background="lightblue"
+}
 
 ///No me funciona el 3 nenes, por que hay un array de 16???
 son todas las pes que hay
