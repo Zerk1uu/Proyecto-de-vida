@@ -22,6 +22,34 @@ function verocultar() {
         document.getElementById("ver").textContent="Mostrar texto"
     } 
 }
+//EJERCICIO 4
+
+//EN PRIMER LUGAR PONES ESTO EN EL FORM
+<form method="post" enctype="text/plain" onsubmit="return validarform()">
+//Y luego este metodo
+function validarform(){
+    var cb=document.getElementsByName("opcion");
+    var rb=document.getElementsByName("estado");
+    var cont1=0;
+    var cont2=0;
+    for (let i = 0; i < cb.length; i++) {
+        if (cb[i].checked) {
+            cont1++;
+        }
+        
+    }
+    for (let i = 0; i < rb.length; i++) {
+        if (rb[i].checked) {
+            cont2++;
+        }
+        
+    }
+    if(cont1==0||cont2==0){
+        alert('debe marcar alguna opcion del checkbox y del radiobutton');
+        return false;
+    }
+}
+
 //EJERCICIO 5
 function fondobeige(input) {
     input.style.background="beige"
