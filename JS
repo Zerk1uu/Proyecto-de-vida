@@ -1,6 +1,6 @@
 //EJERCICIO 3
 var pe= document.getElementsByTagName('p');
-   var texto=pe[16].textContent;   /// esto que es?? por que 16 tiene que ser el tercer parrafo
+   var texto=pe[16].textContent;   /// esto que es?? por que 16 tiene que ser el tercer parrafo       es que yo interpreté que era el tercer parrafo de abajo
    var vocales='aeiouAEIOU';
    var contvoc=0;
    for (let i = 0; i < texto.length; i++) {
