@@ -1,1 +1,14 @@
-
+//EJERCICIO 3
+var pe= document.getElementsByTagName('p');
+   var texto=pe[16].textContent;
+   var vocales='aeiouAEIOU';
+   var contvoc=0;
+   for (let i = 0; i < texto.length; i++) {
+       for (let j = 0; j < vocales.length; j++) {
+           if (texto[i]==vocales[j]) {
+               contvoc++;
+           }
+           
+       }
+   }
+   alert(contvoc+' vocales');
