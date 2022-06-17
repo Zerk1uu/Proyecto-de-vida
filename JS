@@ -12,3 +12,13 @@ var pe= document.getElementsByTagName('p');
        }
    }
    alert(contvoc+' vocales');
+//EJERCICIO 1
+function verocultar() {
+    if (document.getElementById("ver").textContent.includes("Mostrar")) {
+        document.getElementById("ver").textContent="Ocultar texto"
+        document.getElementById("p1").style.display="block"
+    }else{
+        document.getElementById("p1").style.display="none"
+        document.getElementById("ver").textContent="Mostrar texto"
+    } 
+}
