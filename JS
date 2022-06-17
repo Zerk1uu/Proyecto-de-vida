@@ -22,3 +22,6 @@ function verocultar() {
         document.getElementById("ver").textContent="Mostrar texto"
     } 
 }
+
+
+///No me funciona el 3 nenes, por que hay un array de 16???
